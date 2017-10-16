@@ -40,23 +40,32 @@ list[:2]从头开始到第二个元素（返回a[0],a[1]）
 list[1:]从第二个元素开始的所有元素（返回a[1]开始的所有元素）
 
 len(list) 返回列表长度
+
 del 删除列表中的元素
+
 del 也可以删除变量，就像是取消赋值，但是没什么意义，用不到
+
 in和not in 判断一个元素在不在列表中
+
 cat=['fat','black','loud']
 size,color,disposition=cat # 多重赋值，用列表一下子对几个元素赋值
+
 index() 返回列表元素的位置
 list.index('aaa') # 如果列表中不存在aaa，会报错，要用try except处理
+
 list.append('aaa') # 在列表尾部加入元素
 list.insert(1,'aaa') # 把元素插入到列表的位置1
+
 list.remove('aaa') # 从列表中删除指定元素
 list = ['aaa','bbb','ccc','aaa']
 list.remove('aaa') # 删除的是第一个aaa，剩下的list是['bbb','ccc','aaa']
+
 list.sort() # 排序
 list.sort(reverse=True) # 反向排序
 如果列表中有数字和字符串一起，不能调用排序，调用会报错
 字符串排序是根据ASCII字符顺序的，也就是说'Z'在'a'前面，如果要严格按照字符顺序排序，需要都按小写字符排序
 list.sort(key=str.lower)
+
 元组其实就是列表的一种，只不过元组的内容不能改变，效率高一点
 元组用圆括号表示，只有一个元素的元组要加一个逗号表示，('hello',)，否则会被系统认为是字符串
 type(('hello',)) # <class 'tuple'>
@@ -64,6 +73,7 @@ type(('hello')) # <class 'str'>
 list('hello') # 返回['h','e','l','l','o']
 
 列表和字典，元组在函数调用时都是传递引用的
+
 如果一个列表赋值到另一个列表，但是还希望各自改变值，要用copy模块，如果列表中还有列表，要用deepcopy()
 spam = ['A','B','C','D']
 cheese = copy.copy(spam)
