@@ -96,5 +96,13 @@ cheese[1] = 42
 
 最后spam的值：['A','B','C','D'],cheese的值：['A',42,'C','D']
 
+字典是不排序的，所以不能执行切片操作
+keys(),values(),items() 分别返回字典的键值，值，以及键值对。但返回的不是列表，不能排序，没有append方法
+'keyname' in spam.keys() # 判断是否存在相应的键值
+get()方法，有两个参数，一个是键名，一个是默认值
+setdefault()，设置字典默认值，如果该键值不存在，则创建
+spam.setdefault('color','black')
+pprint模块，打印美化模块，pprint.pformat()
+
 从第三章开始每一章的实践项目都实现一下
 
