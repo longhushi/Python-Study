@@ -123,6 +123,71 @@ for k,v in param.items():
 
 =====================================Chapter 6
 
+转义字符 \'  单引号
+
+\"  双引号
+
+\t  制表符
+
+\n  换行符
+
+\\  反斜杠
+
+原始字符串：不转义的字符串 print(r'That is Carol\'s cat.')
+
+'''abc''' 多行字符串
+
+"""多行注释"""
+
+字符串也可以切片操作，也可以使用in 和 not in 操作符
+
+upper() 字符串转成大写
+
+lower() 字符串转成小写
+
+isupper() 判断字符串是否都是大写
+
+islower() 判断字符串是否都是小写
+
+isalpha() 判断字符串是否只包含字母并且非空
+
+isalnum() 判断字符串是否只包含数字和字母，并且非空
+
+isdecimal() 判断字符串是否只包括数字，并且非空
+
+isspace() 判断字符串是否只包含空格、制表符和换行，并且非空
+
+istitle() 判断字符串是否仅包含以大写字母开头、后面都是小写字母的单词。'This Is Title Case'
+
+startswith()和endswith() 字符串的开头和结尾
+
+join() 连接字符串
+
+split() 分割字符串
+
+', '.join(['cats','rats','bats']) 返回 'cats, rats, bats'
+
+rjust() 向左对齐
+
+ljust() 向右对齐
+
+center() 居中对齐
+
+strip() 删除空白字符
+
+rstrip() 删除右边的空白字符
+
+lstrip() 删除左边的空白字符
+
+pyperclip 模块拷贝粘贴字符串
+
+import pyperclip
+
+pyperclip.copy('Hello world!')
+
+pyperclip.paste()
+
+
 
 从第三章开始每一章的实践项目都实现一下
 
