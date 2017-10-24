@@ -273,5 +273,49 @@ re.VERBOSE 表示美化，可以多行写正则表达式
 =====================================Chapter 8
 
 
+os.path.join('usr','bin','spam') 组合路径，会根据不同的系统生成分隔符
+
+os.getcwd()获取当前工作目录
+
+os.chdir()改变当前工作目录
+
+os.makedirs('C:\\delicious\\walnut\\waffles') 创建目录，路径中的所有目录都会创建一遍，如果目录已经存在了则会报错
+
+os.path.abspath(path)获取绝对路径
+
+os.path.isabs(path)判断是否是绝对路径
+
+os.path.relpath(path,start)获取从start路径到path的相对路径的字符串
+
+os.path.dirname(path) 返回path最后一个斜杠之前的所有内容
+
+os.path.basename(path) 返回最后一个斜杠之后的内容，一般就是程序名
+
+os.path.getsize(path) 返回path中文件的字节数
+
+os.listdir(path) 返回path文件夹中的文件名字符串列表
+
+os.path.exists(path) 判断路径是否存在
+
+os.path.isdir(path) 判断路径是否是一个文件夹
+
+f = open(filepath) 打开文件
+
+f = open(filepath,'r',encoding='UTF-8')指定打开方式和编码格式。
+r 只读 w 写入 a 追加写入
+
+shelve模块保存变量，有点像android的sharedPreference
+
+shelfFile = shelve.open('mydata')
+
+cats = ['Pooka']
+
+shelfFile['cats']=cats
+
+shelfFile.close()
+
+
+
+
 从第三章开始每一章的实践项目都实现一下
 
