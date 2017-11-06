@@ -315,6 +315,7 @@ shelfFile['cats']=cats
 shelfFile.close()
 
 =====================================Chapter 9
+
 shutil模块提供了一些函数，用于复制文件和整个文件夹
 
 调用shutil.copy(source,destination)将路径source处的文件复制到路径destination处的文件夹(source和destination都是字符串)。如果destination是一个文件名，它将作为被复制文件的新名字。该函数返回一个字符串，表示被复制文件的路径。
@@ -336,9 +337,13 @@ shutil.rmtree(path)将删除path处的文件夹，它包含的所有文件和文
 可以安装send2trash模块安全的删除
 
 使用os.walk()方法来遍历文件树
+
 os.walk()在循环的每次迭代中返回3个值
+
 1.当前文件夹名称字符串
+
 2.当前文件夹中子文件夹的字符串列表
+
 3.当前文件夹中文件的字符串的列表
 
 for folderName,subfolders,filenames in os.walk('c:\\delicious')
@@ -348,27 +353,34 @@ for folderName,subfolders,filenames in os.walk('c:\\delicious')
 zpifile模块压缩文件
 
 exampleZip = zipfile.ZipFile('example.zip') #读取压缩文件
+
 exampleZip.namelist() #压缩文件中文件列表
-spamInfo = exampleZip.getinfo('spma.txt')
-读取压缩文件中的某一个文件
+
+spamInfo = exampleZip.getinfo('spma.txt') #读取压缩文件中的某一个文件
+
 spamInfo.file_size 文件大小
+
 spamInfo.compress_size 压缩后文件大小
+
 exampleZip.close() 关闭压缩文件
 
 从zip文件中解压缩
 
-exampleZip.extractall()
-exampleZip.extract('spam.txt') 提取单个文件
-exampleZip.extract('spam.txt','C:\\some\\new\\folders') 提取单个文件到指定文件夹中
+exampleZip.extractall() # 提取所有文件
+
+exampleZip.extract('spam.txt') # 提取单个文件
+
+exampleZip.extract('spam.txt','C:\\some\\new\\folders') # 提取单个文件到指定文件夹中
 
 创建ZIP文件
+
 newZip = zipfile.ZipFile('new.zip','w')
 
 向ZIP文件中添加文件
+
 newZip.write('spam.txt',compress_type=zipfile.ZIP_DEFLATED)
+
 newZip.close()
-
-
 
 从第三章开始每一章的实践项目都实现一下
 
